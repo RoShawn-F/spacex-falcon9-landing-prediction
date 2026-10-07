@@ -2,7 +2,7 @@
 
 > *It's not a phase, it's a pipeline.*
 
-An end-to-end data science project that predicts whether a SpaceX Falcon 9 first stage will land successfully. A reusable first stage is a big part of why SpaceX launches cost far less than competitors', so predicting a successful landing helps estimate the cost of a launch, the kind of insight a competing launch provider could use when bidding against SpaceX.
+An end-to-end data science project that predicts whether a SpaceX Falcon 9 first stage will land successfully. SpaceX advertises Falcon 9 launches at about **$62 million**, while other providers charge **$165 million or more**, and much of that gap comes from reusing the first stage. Predicting a successful landing therefore helps estimate the cost of a launch, the kind of insight a competing launch provider could use when bidding against SpaceX.
 
 The project follows the full data pipeline: collecting data from an API and by web scraping, cleaning it, exploring it with SQL and visualizations, building an interactive dashboard and maps, and training classification models.
 

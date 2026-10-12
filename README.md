@@ -24,6 +24,8 @@ The project follows the full data pipeline: collecting data from an API and by w
 | 8 | [Predictive analysis](SpaceX-Machine-Learning-Prediction-Part-5-v1.ipynb) | Compare classification models (Logistic Regression, SVM, Decision Tree and more) | ✅ Done |
 | 9 | Final presentation | Summarize findings for stakeholders | ✅ Done |
 
+> 🗺️ GitHub can't display interactive Folium maps. [View the maps on nbviewer](https://nbviewer.org/github/RoShawn-F/spacex-falcon9-landing-prediction/blob/main/lab-jupyter-launch-site-location-v2.ipynb).
+
 ## Results
 
 | Model | Validation accuracy (10-fold CV) | Test accuracy (18 launches) |

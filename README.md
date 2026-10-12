@@ -6,7 +6,7 @@ An end-to-end data science project that predicts whether a SpaceX Falcon 9 first
 
 The project follows the full data pipeline: collecting data from an API and by web scraping, cleaning it, exploring it with SQL and visualizations, building an interactive dashboard and maps, and training classification models.
 
-🚧 **In progress.** Each stage is added as it's completed.
+✅ **Complete.** All nine stages are finished; notebooks below include their outputs.
 
 ---
 
@@ -14,19 +14,36 @@ The project follows the full data pipeline: collecting data from an API and by w
 
 | # | Stage | What it covers | Status |
 |---|---|---|---|
-| 1 | Data collection (API) | Pull launch data from the SpaceX REST API | ⏳ Upcoming |
-| 2 | Data collection (web scraping) | Scrape Falcon 9 launch records from Wikipedia | ⏳ Upcoming |
-| 3 | Data wrangling | Clean the data and create the landing outcome label | ⏳ Upcoming |
-| 4 | EDA with SQL | Query launch records to find patterns | ⏳ Upcoming |
-| 5 | EDA with visualization | Explore relationships between payload, orbit, launch site and success | ⏳ Upcoming |
-| 6 | Geospatial analysis (Folium) | Map launch sites and their surroundings | ⏳ Upcoming |
-| 7 | Interactive dashboard (Plotly Dash) | Explore success rates by site and payload | ⏳ Upcoming |
-| 8 | Predictive analysis | Compare classification models (Logistic Regression, SVM, Decision Tree and more) | ⏳ Upcoming |
-| 9 | Final presentation | Summarize findings for stakeholders | ⏳ Upcoming |
+| 1 | [Data collection (API)](jupyter-labs-spacex-data-collection-api.ipynb) | Pull launch data from the SpaceX REST API | ✅ Done |
+| 2 | [Data collection (web scraping)](jupyter-labs-webscraping.ipynb) | Scrape Falcon 9 launch records from Wikipedia | ✅ Done |
+| 3 | [Data wrangling](labs-jupyter-spacex-Data_wrangling-v2.ipynb) | Clean the data and create the landing outcome label | ✅ Done |
+| 4 | [EDA with SQL](jupyter-labs-eda-sql-coursera_sqllite.ipynb) | Query launch records to find patterns | ✅ Done |
+| 5 | [EDA with visualization](jupyter-labs-eda-dataviz-v2.ipynb) | Explore relationships between payload, orbit, launch site and success | ✅ Done |
+| 6 | [Geospatial analysis (Folium)](lab-jupyter-launch-site-location-v2.ipynb) | Map launch sites and their surroundings | ✅ Done |
+| 7 | [Interactive dashboard (Plotly Dash)](spacex_dash_app.py) | Explore success rates by site and payload | ✅ Done |
+| 8 | [Predictive analysis](SpaceX-Machine-Learning-Prediction-Part-5-v1.ipynb) | Compare classification models (Logistic Regression, SVM, Decision Tree and more) | ✅ Done |
+| 9 | Final presentation | Summarize findings for stakeholders | ✅ Done |
 
 ## Results
 
-*Coming soon: the best model, its accuracy, and the key factors behind a successful landing.*
+| Model | Validation accuracy (10-fold CV) | Test accuracy (18 launches) |
+|---|---|---|
+| Logistic Regression | 84.6% | 83.3% |
+| SVM | 84.8% | 83.3% |
+| **Decision Tree** | **88.9%** | **83.3%** |
+| KNN | 84.8% | 83.3% |
+
+**Best model:** Decision Tree (highest cross-validation accuracy). All four models score 83.3% on the held-out launches; the main error is false positives (predicting a landing that failed).
+
+**Key findings**
+
+- Landing success rose from 0% (2010–2013) to about 90% (2019) as SpaceX gained experience.
+- KSC LC-39A has the best success rate: 10 of 13 launches landed.
+- 2,000–5,000 kg payloads on FT and B4 boosters land most often; v1.0/v1.1 boosters rarely landed.
+- SSO and VLEO orbits land reliably; GTO is the hardest (52%).
+- Launch sites sit close to the coast, railways and highways, but far from cities (VAFB SLC-4E: coastline 1.35 km, Santa Maria 39 km).
+
+> Note: the live SpaceX API no longer returns JSON, so the data-collection notebook uses IBM's saved copy of the API response.
 
 ## Tools
 

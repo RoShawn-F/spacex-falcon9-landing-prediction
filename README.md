@@ -22,8 +22,8 @@ The project follows the full data pipeline: collecting data from an API and by w
 | 6 | [Geospatial analysis (Folium)](lab-jupyter-launch-site-location-v2.ipynb) | Map launch sites and their surroundings | ✅ Done |
 | 7 | [Interactive dashboard (Plotly Dash)](spacex_dash_app.py) | Explore success rates by site and payload | ✅ Done |
 | 8 | [Predictive analysis](SpaceX-Machine-Learning-Prediction-Part-5-v1.ipynb) | Compare classification models (Logistic Regression, SVM, Decision Tree and more) | ✅ Done |
-| 9 | Final presentation | Summarize findings for stakeholders | ✅ Done |
-
+| 9 | [Final presentation](SpaceX%20Capstone%20-%20Crimson%20Edition.pdf) | Summarize findings for stakeholders | ✅ Done |
+   
 > 🗺️ GitHub can't display interactive Folium maps. [View the maps on nbviewer](https://nbviewer.org/github/RoShawn-F/spacex-falcon9-landing-prediction/blob/main/lab-jupyter-launch-site-location-v2.ipynb).
 
 ## Results
